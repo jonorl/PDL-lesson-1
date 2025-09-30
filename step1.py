@@ -9,17 +9,17 @@ from fastai.vision.all import *
 
 def search_images(keywords, max_images=200): return L(DDGS().images(keywords, max_results=max_images)).itemgot('image')
 
-urls = search_images('carrot photos', max_images=1)
+urls = search_images('dog photos', max_images=1)
 urls[0]
 
-dest = 'carrot.jpg'
+dest = 'dog.jpg'
 download_url(urls[0], dest, show_progress=False)
 
 im = Image.open(dest)
 im.to_thumb(256,256)
 
-searches = 'carrots','vegetables'
-path = Path('carrots_or_not')
+searches = 'dogs','cats'
+path = Path('dogs_or_cats')
 
 for o in searches:
     dest = (path/o)
