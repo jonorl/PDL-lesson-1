@@ -4,7 +4,7 @@ from fastai.vision.all import *
 
 ## Step 2: Train our model
 
-path = Path('dogs_or_cats')
+path = Path('fugazzeta_or_pizza')
 
 failed = verify_images(get_image_files(path))
 failed.map(Path.unlink)
